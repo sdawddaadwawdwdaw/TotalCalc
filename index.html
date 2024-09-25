@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общий баланс</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Общий баланс</h1>
+    <form id="currency-form">
+        <h3>Доллары</h3>
+        <label for="BBRodion">Байбит Родиона</label>
+        <input type="number" step="any" placeholder="USDT" id="BBRodion" required><br>
+        <label for="BBRuslan">Байбит Руслана</label>
+        <input type="number" step="any" placeholder="USDT" id="BBRuslan" required><br>
+        <label for="OKXSmall">OKX (мал.)</label>
+        <input type="number" step="any" placeholder="USDT" id="OKXSmall" required><br>
+        <label for="OKXBig">OKX (бол.)</label>
+        <input type="number" step="any" placeholder="USDT" id="OKXBig" required><br>
+
+        <h3>Рубли</h3>
+        <h4>КОТЛЫ С УЧЕТОМ ЗНАКА!!! (если минус, то минус, если плюс, то плюс)</h4>
+        <div class="wrapper">
+            <div>
+                <label for="SmallPool1">мал.котел 1 оператор</label>
+                <input type="number" step="any" placeholder="RUB" id="SmallPool1" required><br>
+                <label for="BBRodion">бол.котел 1 оператор</label>
+                <input type="number" step="any" placeholder="RUB" id="BigPool1" required><br>
+                <label for="BBRodion">мал.котел 2 оператор</label>
+                <input type="number" step="any" placeholder="RUB" id="SmallPool2" required><br>
+                <label for="BBRodion">бол.котел 2 оператор</label>
+                <input type="number" step="any" placeholder="RUB" id="BigPool2" required><br>
+                <label for="BBRodion">Сумма на ЛК</label>
+                <input type="number" step="any" placeholder="RUB" id="LK" required><br>
+            </div>
+            <div>
+
+                <label for="Cash">Наличка</label>
+                <input type="number" step="any" placeholder="RUB" id="Cash" required><br>
+                <label for="Tradex1">Баланс Tradex оператор 1</label>
+                <input type="number" step="any" placeholder="RUB" id="Tradex1" required><br>
+                <label for="Tradex2">Баланс Tradex оператор 2</label>
+                <input type="number" step="any" placeholder="RUB" id="Tradex2" required><br>
+                <label for="Payscrow">Баланс Payscrow</label>
+                <input type="number" step="any" placeholder="RUB" id="Payscrow" required><br>
+            </div>
+        </div>
+
+
+        <h3>Курс доллара</h3>
+        <input type="number" step="any" placeholder="Введите курс доллара" id="exchangeRate" required>
+
+        <button type="submit">Рассчитать</button>
+    </form>
+
+    <h2 id="result1"></h2>
+    <h2 id="result2"></h2>
+    <h2 id="result3"></h2>
+    <h2 id="result4"></h2>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
