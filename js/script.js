@@ -27,9 +27,11 @@ document.getElementById('currency-form').addEventListener('submit', function(eve
 
     const rubTotal = rub1 + rub2 + rub3 + rub4 + rub5 + rub6 + rub7 + rub8 + rub9;
 
+    const usdTotal = dollar1 + dollar2 + dollar3 + dollar4;
+
     const rubToDollar = rubTotal / exchangeRate;
 
-    const total = dollar1 + dollar2 + dollar3 + dollar4 + rubToDollar;
+    const total = usdTotal + rubToDollar;
 
     if (rub1<0){
         rub1=`${rub1} долг`
@@ -44,8 +46,9 @@ document.getElementById('currency-form').addEventListener('submit', function(eve
         rub4=`${rub4} долг`
     }
     // Выводим результат
-    document.getElementById('result1').textContent = `Котлы: (${rub1} мал.1) + (${rub2} бол.1) + (${rub3} мал.2) + (${rub4} бол.2) `;
-    document.getElementById('result2').textContent = `USDT: ${dollar1}(ББ Родио) + ${dollar2}(ББ Руслан) + ${dollar3}(OKX мал.) + ${dollar4}(OKX бол.) `;
+    document.getElementById('result1').textContent = `USDT: ${dollar1}(ББ Родион) + ${dollar2}(ББ Руслан) + ${dollar3}(OKX мал.) + ${dollar4}(OKX бол.) = ${usdTotal.toFixed(2)} USDT `;
+    document.getElementById('result2').textContent = `Котлы: (${rub1} мал.1) + (${rub2} бол.1) + (${rub3} мал.2) + (${rub4} бол.2) `;
     document.getElementById('result3').textContent = `Балансы и нал: ${rub5}(сумма ЛК) + ${rub6}(Наличка) + ${rub7}(Tradex1) + ${rub8}(Tradex2) + ${rub9}(Payscrow) `;
-    document.getElementById('result4').textContent = `Общая сумма:  $${total.toFixed(2)} по курсу ${exchangeRate}`;
+    document.getElementById('result4').textContent = `RUB: ${rubTotal.toFixed(2)} рублей `;
+    document.getElementById('result5').textContent = `Общая сумма:  $${total.toFixed(2)} по курсу ${exchangeRate}`;
 });
